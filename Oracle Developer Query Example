@@ -1,0 +1,31 @@
+SELECT DISTINCT
+
+e.emplid "Perm EmpID"
+
+, e.emp_name "Employee Name"
+
+, e.BIRTH_DT "Employee Birthday"
+
+FROM
+
+hcm_d_emp e
+
+INNER JOIN hcm_f_job j ON j.d_emplid = e.d_emplid
+
+INNER JOIN hcm_d_empl_class ec ON j.d_empl_class = ec.d_empl_class
+
+INNER JOIN hcm_d_supv_snap ss ON ss.d_supv = j.d_supv AND ss.d_period = j.d_period
+
+INNER JOIN hcm_d_emp e2 ON e2.emplid = ss.supid_lvl3
+
+WHERE
+
+e.d_type = 2
+
+AND j.active = 1
+
+AND ec.empl_class = 'EMP' /* Only get the employee row */
+
+AND ss.supname_lvl3 like '%Rosenthal%'
+
+and TO_DATE(sysdate) BETWEEN j.start_effdt AND j.end_effdt
