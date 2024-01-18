@@ -1,0 +1,7 @@
+SELECT FirstName AS 'FIRST NAME', LastName AS 'LAST NAME', JobTItle AS 'TITLE', Age AS 'AGE'
+FROM EmployeeDemographics
+FULL outer join EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+WHERE Age < '40' 
+AND JobTitle = 'Salesman'
+ORDER BY Age
