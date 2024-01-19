@@ -1,3 +1,5 @@
+--Following are two tables that I have created in Microsoft SQL.
+
 Table 1 Query:
 Create Table EmployeeDemographics 
 (EmployeeID int, 
@@ -14,7 +16,7 @@ JobTitle varchar(50),
 Salary int
 )
 
-
+--Following is the data that has populated the tables above. 
 
 Table 1 Insert:
 Insert into EmployeeDemographics VALUES
