@@ -1,3 +1,5 @@
+--Here is a SQL query that I have written that pull home address of the entire company. 
+
 SELECT
 j.active
 ,j.hire_dt
