@@ -26,6 +26,6 @@ AND j.active = 1
 
 AND ec.empl_class = 'EMP' /* Only get the employee row */
 
-AND ss.supname_lvl3 like '%Rosenthal%'
+AND ss.supname_lvl3 like '%Smith%'
 
 and TO_DATE(sysdate) BETWEEN j.start_effdt AND j.end_effdt
