@@ -1,3 +1,5 @@
+--Here is a SQL query that I have written to pull date of birth of all employees reporting to a manager who's last name is Smith. 
+
 SELECT DISTINCT
 
 e.emplid "Perm EmpID"
